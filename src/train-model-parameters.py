@@ -65,7 +65,7 @@ def eval_model(model, X_test, y_test):
     # calculate accuracy
     y_hat = model.predict(X_test)
     acc = np.average(y_hat == y_test)
-    print('Accuracy:', acc)
+    print('Accuracy: ', acc)
     mlflow.log_metric("Accuracy", acc)
 
     # calculate AUC
