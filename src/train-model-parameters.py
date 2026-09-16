@@ -65,7 +65,7 @@ def eval_model(model, X_test, y_test):
     # calculate accuracy
     y_hat = model.predict(X_test)
     acc = np.average(y_hat == y_test)
-    print('Accuracy:', acc)
+    print('Accuracy: ', acc)
     mlflow.log_metric("Accuracy", acc)
 
     # calculate AUC
@@ -108,7 +108,7 @@ def parse_args():
     parser.add_argument("--training_data", dest='training_data',
                         type=str)
     parser.add_argument("--reg_rate", dest='reg_rate',
-                        type=float, default=0.01)
+                        type=float, default=0.12)
     parser.add_argument("--metrics_output", dest='metrics_output',
                         type=str, default=None)
 
